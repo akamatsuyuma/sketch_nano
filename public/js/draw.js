@@ -12,12 +12,16 @@ $(function () {
   // 画面を真っ白にする
   context2d.fillStyle = '#FFF';
   context2d.fillRect(0, 0, width, height);
+  context2d.strokeStyle = 'red';
 
   // マウスを押し始めた時
   $canvas.mousedown(function (e) {
     var x = e.originalEvent.layerX; // 行き先
     var y = e.originalEvent.layerY; // 行き先
 
+context2d.lineWidth = $( "#slider" ).slider( "value" );
+context2d.strokeStyle.alpha = 10;
+context2d.strokeStyle = $(".pen-color").val();
     context2d.beginPath();
     context2d.moveTo(x, y);
     isDrawing = true;
@@ -42,6 +46,15 @@ $(function () {
   $canvas.mouseleave(function (e) {
     isDrawing = false;
   });
+
+    $(function() {
+      $( "#slider" ).slider({
+    orientation: "horizontal",
+    min: 0.1,
+    max: 50,
+    value: 3,
+  });
+    });
 
   // 保存
   $('button.save').click(function (e) {

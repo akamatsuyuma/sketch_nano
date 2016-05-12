@@ -1,7 +1,44 @@
+html {
+    height: 100%;
+}
 body {
-    background: #bdf;
+    background: linear-gradient(#05FBFF, #1E00FF);
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+    font: large/150% "ゴシック";
+    font-weight: 10;
 }
 
 canvas {
     background: #fff;
 }
+
+.intro{
+  background : lightblue;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+
+.list-about-nano{
+  text-align: left;
+}
+
+.title{
+  color: #1E00FF;
+  text-shadow: 2px 2px 2px white;
+  text-align: right;
+  text-decoration: underline;
+}
+a{
+  color: brack;
+  font-size: xx-large;
+  text-decoration: none;
+  text-shadow: 2px 2px 10px white;
+}
+
+a:link { color:#eeeeee; text-decoration:none }
+a:visited { color:#eeeeee; text-decoration:none }
+a:hover { color:white; text-decoration:none }
+a:active { color:white; text-decoration:none }
